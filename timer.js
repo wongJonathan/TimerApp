@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, SafeAreaView, TouchableOpacity} from 'react-native';
 import TimerMixin from 'react-timer-mixin';
 
 const styles = StyleSheet.create({
@@ -10,12 +10,13 @@ const styles = StyleSheet.create({
     },
 });
 
+
 export default class Timer extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            current_time: props.time
+            current_time: 10
         };
     }
     
