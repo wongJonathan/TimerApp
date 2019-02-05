@@ -13,14 +13,22 @@ const styles = StyleSheet.create({
   });  
 
 export default class TimerView extends Component {
+
+    onPress = () => {
+        console.log("Pressed")
+        this.props.navigation.navigate('TimePicker');
+    }
+
     render() {
+        console.log("hi");
         return (
-          <SafeAreaView>
-            <Timer time={10}/>
-            <TouchableOpacity style={styles.button}>
+            <View>
+                <TimePicker />
+            {/* <Timer time={10}/>
+            <TouchableOpacity style={styles.button} onPress={this.onPress}>
               <Text>Select new time</Text>
-            </TouchableOpacity>
-          </SafeAreaView>    
+            </TouchableOpacity> */}
+            </View>  
         );
       }
 }
